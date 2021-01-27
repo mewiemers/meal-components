@@ -13,3 +13,4 @@ export const offer = () => cardOffers;
 export const fruits = () => cardFruits;
 export const drinks = () => cardDrinks;
 export const Container = () => cardContainer;
+Container.parameters = { layout: "fullscreen" };
