@@ -1,16 +1,30 @@
+.fig-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 .card {
   border-radius: 10%;
-  height: 12vw;
-  width: 12vw;
+  height: 100px;
+  width: 100px;
   object-fit: cover;
   object-position: center;
+  margin: 0;
 }
-figcaption {
-  text-align: center;
-  padding-top: 10px;
-  font-weight: bold;
-}
+
 .card-text {
   text-align: center;
   font-weight: bold;
+  margin: 3px 0;
+}
+.card-container {
+  display: grid;
+  column-gap: 20px;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  padding-left: 20px;
+  justify-content: start;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
 }
