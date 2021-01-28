@@ -8,7 +8,7 @@
   grid-gap: 6px;
 }
 .head-color {
-  color: #fc6011;
+  color: var(--main-color);
   font-weight: bold;
 }
 .subheading {
