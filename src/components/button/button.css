@@ -1,14 +1,14 @@
 .btn {
   border-radius: 20px;
   font-size: 16px;
-  color: white;
-  background: #fc6011;
+  color: var(--input-background-color);
+  background: var(--main-color);
   border: none;
   padding: 15px 20px;
   align-items: center;
 }
 .btn-border {
-  color: #fc6011;
-  background: white;
-  border: 1px solid #fc6011;
+  color: var(--main-color);
+  background: var(--input-backround-color);
+  border: 1px solid var(--main-color);
 }
