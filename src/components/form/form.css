@@ -1,14 +1,27 @@
 .form {
-  color: #d7d4e4;
+  color: #807e88;
   display: grid;
   row-gap: 1rem;
-}
-.input {
-  font-size: 1rem;
-  background: #40bd27;
   text-align: center;
-  border: 4px solid orange;
 }
+
 .title-text {
   text-align: center;
+}
+.form__otp {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-column-gap: 1.2em;
+}
+.form__hint a {
+  margin-left: 0.5em;
+  color: #fc6011;
+  font-weight: bold;
+  text-decoration: none;
+}
+.form__otp input {
+  padding: 10px;
+  width: 2.8rem;
+  border-radius: 10px;
 }
