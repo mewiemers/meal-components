@@ -33,13 +33,16 @@ function createinfotext() {
   return infotext;
 }
 function createPasswordContainerElement() {
-  const passwordContainer = document.createElement("div");
-  passwordContainer.className = "form__otp";
   const field1 = createOTPInput();
   const field2 = createOTPInput();
   const field3 = createOTPInput();
   const field4 = createOTPInput();
-  passwordContainer.append(field1, field2, field3, field4);
+  const passwordContainer = createElement("div", {
+    className: "form__otp",
+    children: [field1, field2, field3, field4],
+  });
+
+  // passwordContainer.append(field1, field2, field3, field4);
 
   return passwordContainer;
 }
@@ -59,14 +62,18 @@ export function createVerifyForms() {
 
   const passwordContainer = createPasswordContainerElement();
 
-  const hint = document.createElement("p");
-  hint.innerText = "Didn`t Receive?";
-  hint.className = "form__hint";
   const forgotpw = document.createElement("a");
   forgotpw.innerText = "Click here";
   forgotpw.href = "#";
+  const hint = createElement("p", {
+    className: "form__hint",
+    innerText: "Didn`t Receive?",
+    children: [forgotpw],
+  });
+  // hint.innerText = "";
+  // hint.className = "form__hint";
 
-  hint.append(forgotpw);
+  // hint.append(forgotpw);
 
   verify.append(title, infotext, passwordContainer, button, hint);
 
