@@ -1,9 +1,11 @@
+import { createElement } from "../../utilities/createElement";
+
 function createOTPInput() {
-  const input = document.createElement("input");
-  input.type = "password";
-  input.placeholder = "*";
-  input.className = "input";
-  input.maxLength = "1";
+  const input = createElement("input", {
+    className: "input",
+    placeholder: "*",
+    type: "password",
+  });
 
   return input;
 }
