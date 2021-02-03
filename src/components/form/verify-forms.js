@@ -1,43 +1,52 @@
-export function createVerifyForms() {
-  const verify = document.createElement("form");
-  verify.className = "form";
+function createOTPInput() {
+  const input = document.createElement("input");
+  input.type = "password";
+  input.placeholder = "*";
+  input.className = "input";
+  input.maxLength = "1";
 
+  return input;
+}
+
+function createHeadLine() {
+  const title = document.createElement("h2");
+  title.innerText = "We have sent an OTP to your Mobile";
+  title.className = "title-text";
+
+  return title;
+}
+function createbutton() {
   const button = document.createElement("button");
   button.innerText = "Next";
   button.className = "btn";
 
+  return button;
+}
+function createinfotext() {
+  const infotext = document.createElement("p");
+  infotext.innerText =
+    "Please check your mobile number 017*****12 continue to reset your password";
+
+  return infotext;
+}
+
+export function createVerifyForms() {
+  const verify = document.createElement("form");
+  verify.className = "form";
+
+  const button = createbutton();
   function register() {
     alert("Registered");
   }
   button.addEventListener("click", register);
 
-  const title = document.createElement("h2");
-  title.innerText = "We have sent an OTP to your Mobile";
-  title.className = "title-text";
+  const title = createHeadLine();
+  const infotext = createinfotext();
 
-  const infotext = document.createElement("p");
-  infotext.innerText =
-    "Please check your mobile number 017*****12 continue to reset your password";
-
-  const field1 = document.createElement("input");
-  field1.placeholder = "*";
-  field1.className = "input";
-  field1.type = "password";
-
-  const field2 = document.createElement("input");
-  field2.placeholder = "*";
-  field2.className = "input";
-  field2.type = "password";
-
-  const field3 = document.createElement("input");
-  field3.placeholder = "*";
-  field3.className = "input";
-  field3.type = "password";
-
-  const field4 = document.createElement("input");
-  field4.placeholder = "*";
-  field4.className = "input";
-  field4.type = "password";
+  const field1 = createOTPInput();
+  const field2 = createOTPInput();
+  const field3 = createOTPInput();
+  const field4 = createOTPInput();
 
   const passwordContainer = document.createElement("div");
   passwordContainer.className = "form__otp";
