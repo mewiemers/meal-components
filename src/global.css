@@ -1,9 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: "Metropolis";
+  src: url(./assets/metropolis.woff2) format(woff2),
+    url(./assets/metropolis.woff) format(woff),
+    url(./assets/metropolis.ttf) format(ttf);
+}
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+:root {
+  --main-color: #fc6011;
+  --primary-font-color: #4a4b4d;
+  --input-background-color: #f2f2f2;
+  --primary-font: "Quicksand", sans-serif;
+  --placeholder-color: #b6b7b7;
 }
 
 html {
@@ -11,7 +24,8 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Metropolis", sans-serif;
+  font-family: var(--primary-font);
   margin: 0;
 }
 
@@ -21,5 +35,5 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--primary-font);
 }
