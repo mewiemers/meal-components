@@ -5,6 +5,7 @@ function createOTPInput() {
     className: "input",
     placeholder: "*",
     type: "password",
+    maxLength: "1",
   });
 
   return input;
