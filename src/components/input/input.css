@@ -1,12 +1,17 @@
-input {
+.input {
   border-radius: 15px;
   font-size: 14px;
   background: var(--input-background-color);
   border: none;
-  padding: 20px 40px;
-  text-align: left;
+  text-align: center;
 }
+<<<<<<< HEAD
+.input ::placeholder {
+  color: #b6b7b7;
+  font-size: 20px;
+=======
 input ::placeholder {
   color: var(--placeholder-color);
   font-size: 14px;
+>>>>>>> main
 }
