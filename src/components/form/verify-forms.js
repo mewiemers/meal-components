@@ -10,6 +10,7 @@ function createInputElement() {
     max: 9,
   });
 }
+// Attention -name must be equal with stories.js
 export function createVerifyForm() {
   const inputfield1 = createInputElement();
   const inputfield2 = createInputElement();
