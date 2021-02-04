@@ -17,6 +17,10 @@ export function createVerifyForm() {
   const inputfield3 = createInputElement();
   const inputfield4 = createInputElement();
 
+  const messageElement = createElement("p", {
+    className: "message",
+  });
+
   return createElement("form", {
     className: "form",
     children: [
@@ -27,13 +31,14 @@ export function createVerifyForm() {
         innerText:
           "Please check your mobile number 0171*****12 to reset your password",
       }),
+      messageElement,
       createElement("div", {
         className: "form__otp",
         children: [inputfield1, inputfield2, inputfield3, inputfield4],
       }),
       createElement("input", {
         type: "submit",
-        innerText: "Next",
+        value: "Next",
         className: "btn",
       }),
       createElement("p", {
@@ -56,9 +61,9 @@ export function createVerifyForm() {
         inputfield4.value;
 
       if (password === "1234") {
-        alert("Gewonnen!");
+        messageElement.innerText = "Sie haben gewonnen!";
       } else {
-        alert("Das war leider nix!");
+        messageElement.innerText = "Dit war nüscht!";
       }
     },
   });
