@@ -1,6 +1,6 @@
 import "./form.css";
 import { createRegisterForm } from "./register-forms";
-import { createVerifyForms } from "./verify-forms";
+import { createVerifyForm } from "./verify-forms";
 
 export default {
   title: "Components/Form",
@@ -8,4 +8,4 @@ export default {
 };
 
 export const register = () => createRegisterForm();
-export const verify = () => createVerifyForms();
+export const verify = () => createVerifyForm();
